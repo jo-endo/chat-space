@@ -68,8 +68,8 @@
 
   .chat-main__message-form{
     background-color: #d2d2d2;
-    height: 90px;
-    padding: 20px 50px 20px 40px;
+    box-sizing: border-box;
+    padding: 20px 40px ;
     .message-form{
       display: flex;
       justify-content:  space-between;
@@ -80,14 +80,17 @@
         background-color: #ffffff;
         .message-form__text{
           height: 50px;
-          padding: 0 45px 0 15px;
+          padding-left:10px;
           width: 100%;
 
         }
         .message-form__image{
           height: 50px;
           position: absolute;
+          top: 15px;
           right: 10px;
+          
+
           .message-form__file{
             display: none;
           }
