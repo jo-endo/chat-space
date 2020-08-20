@@ -10,13 +10,30 @@
     = link_to '#',class: "chat-main__group-info--edit" do
       Edit
   .chat-main__message-list
-    .message-
-    .chat-main__info
-      .chat-main__info--name
-        masa
-      .chat-main__info--date
-        2020/08/20(Thu) 08:00
-    .chat-main__message
-      .chat-main__message--text
-        おはよう!
+    .message-box
+      .chat-main__info
+        .chat-main__info--name
+          masa
+        .chat-main__info--date
+          2020/08/20(Thu) 08:00
+      .chat-main__message
+        .chat-main__message--text
+          おはよう!
+    .message-box
+      .chat-main__info
+        .chat-main__info--name
+          masa
+        .chat-main__info--date
+          2020/08/21(Fri) 08:00
+      .chat-main__message
+        .chat-main__message--text
+          今日は夜から雨
   .chat-main__message-form
+    %form.message-form
+      .message-form__box
+        %input.message-form__text{type: 'text', placeholder: 'type a message'}
+        %label.message-form__image
+          = icon('far', 'image', class: 'message-form__icon,')
+          %input.message-form__file{type: 'file'}
+      %input.message-form__submit{type: 'submit', value: 'Send'}  
+    
