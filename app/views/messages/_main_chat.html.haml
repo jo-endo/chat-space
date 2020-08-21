@@ -1,39 +1,39 @@
-.chat-main
-  .chat-main__group
-    .chat-main__group-info
-      .chat-main__group-info--group
+.Chat-main
+  .Chat-main__group
+    .Chat-main__group-info
+      .Chat-main__group-info--group
         test
-      %ul.chat-main__group-info--member
+      %ul.Chat-main__group-info--member
         Menber:
-        %li.chat-main__group-info--membername
+        %li.Chat-main__group-info--membername
           masa
-    = link_to '#',class: "chat-main__group-info--edit" do
+    = link_to '#',class: "Chat-main__group-info--edit" do
       Edit
-  .chat-main__message-list
-    .message-box
-      .chat-main__info
-        .chat-main__info--name
+  .Chat-main__message-list
+    .Message-box
+      .Message-box__info
+        .Message-box__info--name
           masa
-        .chat-main__info--date
+        .Message-box__info--date
           2020/08/20(Thu) 08:00
-      .chat-main__message
-        .chat-main__message--text
+      .Message-box__message
+        .Message-box__message--text
           おはよう!
-    .message-box
-      .chat-main__info
-        .chat-main__info--name
+    .Message-box
+      .Message-box__info
+        .Message-box__info--name
           masa
-        .chat-main__info--date
+        .Message-box__info--date
           2020/08/21(Fri) 08:00
-      .chat-main__message
-        .chat-main__message--text
+      .Message-box__message
+        .Message-box__message--text
           今日は夜から雨
-  .chat-main__message-form
-    %form.message-form
-      .message-form__box
-        %input.message-form__text{type: 'text', placeholder: 'type a message'}
-        %label.message-form__image
+  .Message-box__message-form
+    %form.Message-form
+      .Message-form__box
+        %input.Message-form__text{type: 'text', placeholder: 'type a message'}
+        %label.Message-form__image
           = icon('far', 'image', class: 'message-form__icon,')
-          %input.message-form__file{type: 'file'}
-      %input.message-form__submit{type: 'submit', value: 'Send'}  
+          %input.Message-form__file{type: 'file'}
+      %input.Message-form__submit{type: 'submit', value: 'Send'}  
     
