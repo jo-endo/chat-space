@@ -1,14 +1,14 @@
 .Side-bar
   .Side-bar__user-name
     .Top-items
-      %p.Top-items__name
-        masa
+      %h.Top-items__name
+        = current_user.name
       %ul.Top-items__icons
         %li.Top-items__left-icons
           = link_to "#" do
             = icon('far', 'edit')
         %li.Top-items__right-icons
-          = link_to "#" do 
+          = link_to edit_user_path(current_user) do 
             = icon('fas', 'cog')
   .Side-bar__group-list
     .Side-bar__box
