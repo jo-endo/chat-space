@@ -2,7 +2,7 @@
   .Chat-main__group
     .Chat-main__group-info
       .Chat-main__group-info--group
-        test
+        sasa
       %ul.Chat-main__group-info--member
         Menber:
         %li.Chat-main__group-info--membername
@@ -10,6 +10,7 @@
     = link_to '#',class: "Chat-main__group-info--edit" do
       Edit
   .Chat-main__message-list
+    = render @messages
     .Message-box
       .Message-box__info
         .Message-box__info--name
@@ -19,20 +20,11 @@
       .Message-box__message
         .Message-box__message--text
           おはよう!
-    .Message-box
-      .Message-box__info
-        .Message-box__info--name
-          masa
-        .Message-box__info--date
-          2020/08/21(Fri) 08:00
-      .Message-box__message
-        .Message-box__message--text
-          今日は夜から雨
   .Message-box__message-form
-    %form.Message-form
+    = form_with model: [@group, @message], html: {class: "Message-form"}, local: true do |f|
       .Message-form__box
-        %input.Message-form__text{type: 'text', placeholder: 'type a message'}
-        %label.Message-form__image
-          = icon('far', 'image', class: 'message-form__icon,')
-          %input.Message-form__file{type: 'file'}
-      %input.Message-form__submit{type: 'submit', value: 'Send'}  
+        = f.text_field :content, class: 'Message-form__text', placeholder: 'type a message'
+        = f.label :image, class: 'Message-form__image' do
+          = icon('far', 'image', class: 'Message-form__icon')
+          = f.file_field :image, class: 'Message-form__file'
+      = f.submit 'Send', class: 'Message-form__submit'
