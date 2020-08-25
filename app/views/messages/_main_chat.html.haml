@@ -2,13 +2,13 @@
   .Chat-main__group
     .Chat-main__group-info
       .Chat-main__group-info--group
-        sasa
+        = @group.name
       %ul.Chat-main__group-info--member
         Menber:
         %li.Chat-main__group-info--membername
-          masa
-    = link_to '#',class: "Chat-main__group-info--edit" do
-      Edit
+          - @group.users.each do |user|
+            = user.name
+    = link_to "Edit", edit_group_path(@group.id),class: "Chat-main__group-info--edit" 
   .Chat-main__message-list
     = render @messages
     .Message-box
