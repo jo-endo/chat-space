@@ -18,8 +18,9 @@
         .Message-box__info--date
           2020/08/20(Thu) 08:00
       .Message-box__message
-        .Message-box__message--text
+        %p.Message-box__message--text
           おはよう!
+        
   .Message-box__message-form
     = form_with model: [@group, @message], html: {class: "Message-form"}, local: true do |f|
       .Message-form__box
